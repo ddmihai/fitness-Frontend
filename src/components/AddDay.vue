@@ -26,6 +26,7 @@ import axios from 'axios';
 
                axios.post(links.ADD_DAY, { dayName : this.dayName })
                .then((response) => {
+                   location.reload();
                    console.log(response.data.message);
                });
            }
