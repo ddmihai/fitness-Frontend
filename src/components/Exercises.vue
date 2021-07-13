@@ -13,8 +13,9 @@
                         <p class="exercises__comms">Comments: {{ ex.exerciseComments }}</p>
                         <p class="exercises__sets">Total Sets: {{ ex.sets.length }}</p>
                         <!-- Button for deleting exercise -->
-
+                        <img width="25" src="https://img.icons8.com/color/100/000000/delete-sign--v1.png"/>
                         <!-- Button for getting all the sets -->
+                        <img  width="25" src="https://img.icons8.com/office/16/000000/plus-math.png"/>
                    </li>
                </ul>
            </div>

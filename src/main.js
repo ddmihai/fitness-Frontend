@@ -8,7 +8,7 @@ import MainContainer    from './components/MainContainer.vue';
 import AddDay           from './components/AddDay.vue';
 import Day              from './components/Day.vue'; 
 import Exercises        from './components/Exercises.vue'; 
-import DeleteExercise   from './components/DeleteExercise.vue'; 
+import DeleteDay        from './components/DeleteDay.vue'; 
 import AddExercise      from './components/AddExercise.vue'; 
 
 /* Declare components */
@@ -17,7 +17,7 @@ Vue.component('main-container',   MainContainer);
 Vue.component('add-day',          AddDay);
 Vue.component('app-day',          Day);
 Vue.component('app-exercises',    Exercises);
-Vue.component('del-exercises',    DeleteExercise);
+Vue.component('del-day',    DeleteDay);
 Vue.component('add-exercises',    AddExercise);
 
 /* Import Axios */

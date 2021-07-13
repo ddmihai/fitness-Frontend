@@ -1,13 +1,13 @@
 <template>
     <section>
-            <div class="header" v-for="(e) in exArray" :key="e._id">
+            <div class="header" v-for="(e) in dayAdday" :key="e._id">
                 <p><span>Day:</span> {{ e.dayName }}</p>
                 <p class="total">Exercises number: {{ e.exercices.length }}</p>
                 
                 <div class="btn-collection">
                     <app-exercises :exID="e._id"></app-exercises>
-                    <del-exercises :exID="e._id"></del-exercises>
-                    <add-exercises :exID="e._id"></add-exercises>
+                    <del-day :exID="e._id"></del-day>
+                    <add-exercises :dayID="e._id"></add-exercises>
                 </div>
             </div>
     </section>
@@ -22,7 +22,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      exArray:      [],
+      dayAdday:      [],
       modalOpened:  false
     }
   },
@@ -33,7 +33,7 @@ export default {
     getDays() {
       axios.get(links.GET_DAYS)
                .then((response) => {
-                   this.exArray = response.data;
+                   this.dayAdday = response.data;
                });
     },
 
@@ -50,9 +50,9 @@ export default {
     this.getDays()
   },
 
-  updated() {
-      this.getDays()
-  }
+  // updated() {
+  //     this.getDays()
+  // }
 }
 </script>
 
@@ -61,8 +61,8 @@ export default {
 {
     border: 1px solid #333;
     min-height: 80px;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 5px;
+    margin: 10px 5px 10px 5px;
     margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
