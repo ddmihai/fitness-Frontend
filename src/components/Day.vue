@@ -1,12 +1,13 @@
 <template>
     <section>
-            <div class="header" v-for="e in exArray" :key="e._id">
+            <div class="header" v-for="(e) in exArray" :key="e._id">
                 <p><span>Day:</span> {{ e.dayName }}</p>
-                <p>Exercises number: {{ e.exercices.length }}</p>
+                <p class="total">Exercises number: {{ e.exercices.length }}</p>
                 
                 <div class="btn-collection">
-                    <img @click="addExercise(e._id)" src="https://img.icons8.com/ios-filled/50/000000/add--v2.png"/>
-                    <img @click="delExercise(e._id)" src="https://img.icons8.com/ios-filled/50/000000/delete-trash.png"/>
+                    <app-exercises :exID="e._id"></app-exercises>
+                    <del-exercises :exID="e._id"></del-exercises>
+                    <add-exercises :exID="e._id"></add-exercises>
                 </div>
             </div>
     </section>
@@ -21,7 +22,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      exArray: []
+      exArray:      [],
+      modalOpened:  false
     }
   },
 
@@ -60,7 +62,8 @@ export default {
     border: 1px solid #333;
     min-height: 80px;
     padding: 10px;
-    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -68,15 +71,17 @@ export default {
     border-radius: 5px;
 }
 
-img 
-{
-    width: 25px;
-    margin: 10px;
-    cursor: pointer;
-}
-
 .btn-collection
 {
-    margin-left: auto;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-content: flex-end;
+}
+
+.total
+{
+    font-size: .8em;
+    margin-top: 6px;
 }
 </style>
