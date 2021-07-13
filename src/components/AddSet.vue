@@ -4,6 +4,7 @@
 
         <div v-if="open" class="set-dropdown">
             <form @submit.prevent="addSet">
+                <h3>Add new set</h3>
                 <input placeholder="Reps completed" v-model="reps" type="text" />
                 <input placeholder="Weight" v-model="weight" type="text" />
                 <input placeholder="Time between" v-model="timeBetween" type="text" />
@@ -63,14 +64,20 @@ import axios from 'axios';
 </script>
 
 <style lang="scss" scoped>
-.set-dropdown
-{
-    border: 2px solid red;
-}
 
 img
 {
     margin: 10px;
+}
+
+section
+{
+    width: 100%;
+}
+
+.set-dropdown
+{
+    width: 100%;
 }
 
 form
@@ -84,8 +91,7 @@ form
 input
 {
     height: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 5px 10px 5px;
     padding-left: 10px;
 }
 
@@ -93,5 +99,11 @@ button
 {
     height: 40px;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3
+{
+    color: white;
 }
 </style>

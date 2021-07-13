@@ -11,6 +11,8 @@ import Exercises        from './components/Exercises.vue';
 import DeleteDay        from './components/DeleteDay.vue'; 
 import AddExercise      from './components/AddExercise.vue'; 
 import AddSet           from './components/AddSet.vue'; 
+import DeleteExercise   from './components/DeleteExercise.vue'; 
+import GetSets          from './components/GetSets.vue';
 
 /* Declare components */
 Vue.component('app-header',       Header);
@@ -21,6 +23,8 @@ Vue.component('app-exercises',    Exercises);
 Vue.component('del-day',          DeleteDay);
 Vue.component('add-exercises',    AddExercise);
 Vue.component('add-sets',         AddSet);
+Vue.component('del-exercise',     DeleteExercise);
+Vue.component('get-sets',         GetSets);
 
 /* Import Axios */
 import axios from 'axios'
