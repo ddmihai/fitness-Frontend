@@ -1,6 +1,6 @@
 <template>
     <section class="exercises">
-        <img @click="shExercises" src="https://img.icons8.com/ios/50/000000/down-squared--v2.png"/>
+        <img @click="shExercises" src="https://img.icons8.com/ios-filled/50/000000/drag-list-down.png"/>
         <div v-if="opened" class="exercises__container">
            <div v-if="exArray.length == 0" class="exercise__empty">
                <h3>No exercises yet!</h3>
@@ -15,7 +15,7 @@
                         <!-- Button for deleting exercise -->
                         <img width="25" src="https://img.icons8.com/color/100/000000/delete-sign--v1.png"/>
                         <!-- Button for getting all the sets -->
-                        <img  width="25" src="https://img.icons8.com/office/16/000000/plus-math.png"/>
+                        <add-sets :exerciseID="ex._id"></add-sets>
                    </li>
                </ul>
            </div>

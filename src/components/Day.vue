@@ -48,11 +48,7 @@ export default {
 
   mounted() {
     this.getDays()
-  },
-
-  // updated() {
-  //     this.getDays()
-  // }
+  }
 }
 </script>
 
