@@ -7,7 +7,10 @@ const links = {
     /* Accept Get */
     GET_DAYS:                   'https://vast-cliffs-86394.herokuapp.com/api/get/dailyworkout',
     GET_DAY_EXERCISES:          'https://vast-cliffs-86394.herokuapp.com/api/get/exercises/',        //      + DayID
-    GET_SETS:                   'https://vast-cliffs-86394.herokuapp.com/api/get/sets/'              //      + ExerciseID
+    GET_SETS:                   'https://vast-cliffs-86394.herokuapp.com/api/get/sets/',              //      + ExerciseID
+
+    /* Delete */
+    DELETE_DAY:                 'https://vast-cliffs-86394.herokuapp.com/api/delete/day/'
 }
 
 export default links;

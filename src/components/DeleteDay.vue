@@ -6,6 +6,9 @@
 </template>
 
 <script>
+import link from '../../services/links.js';
+import axios from 'axios';
+
     export default {
         props: ['exID'],
 
@@ -17,6 +20,12 @@
 
         methods: {
             delet() {
+                axios.delete(link.DELETE_DAY + this.exID)
+                .then((response) => {
+                    alert(response.data)
+                    location.reload();
+                })
+                .catch(error => console.log(error))
                 this.opened = !this.opened;
             }
         }
